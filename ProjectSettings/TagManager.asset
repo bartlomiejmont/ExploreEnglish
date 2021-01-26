@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Task
+  - Crosshair
+  - Bobble
+  - Score
+  - WordObject
+  - WinText
+  - WordObjectHolder
+  - Validation
+  - WordFrame
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Character
+  - Task
+  - Crosshair
+  - Bobble
+  - FinishedTask
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BG
+    uniqueID: 2560354927
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Tasks
+    uniqueID: 2081735463
+    locked: 0
+  - name: Player
+    uniqueID: 3854087545
+    locked: 0
+  - name: TaskWIndow
+    uniqueID: 4251370793
+    locked: 0

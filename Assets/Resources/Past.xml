@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PastWordsCollection>
+    <PresetPastWords>
+        <PresentPast>
+            <presentWord>Make</presentWord>
+            <pastWord>Made</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>Speak</presentWord>
+            <pastWord>Spoke</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>Bring</presentWord>
+            <pastWord>Brought</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>Cost</presentWord>
+            <pastWord>Cost</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>Leave</presentWord>
+            <pastWord>Left</pastWord>
+        </PresentPast>
+    </PresetPastWords>
+</PastWordsCollection>

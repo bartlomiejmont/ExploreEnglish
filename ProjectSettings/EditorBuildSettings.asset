@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: dc6736817108e0741871cdf9fa282280
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ShootingTaskScene.unity
+    guid: 4a2f8d269ca92bc4ebfda1a512972ee0
+  - enabled: 0
+    path: Assets/Scenes/GameScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/BubblesTaskScene.unity
+    guid: e249184054c273041b26fff70255660a
+  - enabled: 1
+    path: Assets/Scenes/UsernameScene.unity
+    guid: 61b24f29b2b921d4082dbe4dfef78e51
+  - enabled: 1
+    path: Assets/Scenes/PastTenseTaskScene.unity
+    guid: aef8f6619d0edf6468b37f5e06c3e64e
+  - enabled: 1
+    path: Assets/Scenes/MakeSentenceTaskScene.unity
+    guid: 6b4cae7e17f910643bd09619ffe98913
+  - enabled: 1
+    path: Assets/Scenes/ReportScene.unity
+    guid: 86e98d1f2a02f4242a8115078becd877
+  m_configObjects: {}
