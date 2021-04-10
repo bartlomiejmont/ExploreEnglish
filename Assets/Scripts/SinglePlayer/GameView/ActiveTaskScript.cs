@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Mirror;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ActiveTaskScript : NetworkBehaviour
+public class ActiveTaskScript : MonoBehaviour
 {
 
     public bool isWon;

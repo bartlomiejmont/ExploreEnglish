@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
+using SinglePlayer.XML;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 [XmlRoot("WordsCollection")]
@@ -17,6 +19,9 @@ public class WordsContainer
     [XmlArray("PresetPastWords")]
     [XmlArrayItem("PresentPast")]
     public List<PresentPast> PresetPastWords = new List<PresentPast>();
+    [XmlArray("MakeSentences")]
+    [XmlArrayItem("Sentence")]
+    public List<Sentence> Setneces = new List<Sentence>();
     
     public static WordsContainer Load(string path)
     {
@@ -71,5 +76,40 @@ public class WordsContainer
 
         return wordsAndCategories;
     }
+
+    public static Dictionary<string, string> GetAllPairsForPresentPast()
+    {
+        Dictionary<string, string> words = new Dictionary<string, string>();
+        List<PresentPast> presetPastWords = Load(EngToPl).PresetPastWords;
+
+        foreach (var word in presetPastWords)
+        {
+            words.Add(word.presentWord,word.pastWord);
+        }
+
+        return words;
+    }
+
+    public static Dictionary<string, List<Tuple<string, int>>> GetRandomSentence()
+    {
+        List<Tuple<string, int>> list = new List<Tuple<string, int>>();
+        List<Sentence> sentences = Load(EngToPl).Setneces;
+
+        Dictionary<string, List<Tuple<string, int>>> result = new Dictionary<string, List<Tuple<string, int>>>();
+
+        int randomIndex = Random.Range(0, sentences.Count);
+        
+        Debug.Log(randomIndex);
+        
+        for (int i = 0; i < sentences[randomIndex].words.Count; i++)
+        {
+            list.Add(new Tuple<string, int>(sentences[randomIndex].words[i],i));
+        }
+        
+        result.Add(sentences[randomIndex].polishSentence,list);
+        
+        return result;
+    }
+
     
 }

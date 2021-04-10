@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BobbleController : MonoBehaviour
 {
@@ -9,8 +6,6 @@ public class BobbleController : MonoBehaviour
     private RaycastHit rayHit;
     Ray ray;
     private bool isActive;
-
-
 
     void Start()
     {
@@ -21,7 +16,7 @@ public class BobbleController : MonoBehaviour
 
     void Update()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        ray = Camera.current.ScreenPointToRay(Input.mousePosition);
         transform.localScale += new Vector3(0.05f, 0.05f, 0.05f) * Time.deltaTime;
         if (transform.localScale.x >= 0.3f)
         {

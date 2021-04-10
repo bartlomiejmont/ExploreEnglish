@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = System.Random;
 
@@ -39,6 +40,6 @@ public class DrawTaskCategoryMulti : MonoBehaviour
 
     public void ChangeBackToMainScene()
     {
-        SceneLoader.LoadMainScene();
+        SceneManager.LoadScene("GameSceneMultiplayer");
     }
 }

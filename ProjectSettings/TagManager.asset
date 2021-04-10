@@ -13,6 +13,10 @@ TagManager:
   - WordObjectHolder
   - Validation
   - WordFrame
+  - GameOver
+  - NetworkManager
+  - PlayersLeft
+  - GameOverParent
   layers:
   - Default
   - TransparentFX
@@ -61,4 +65,7 @@ TagManager:
     locked: 0
   - name: TaskWIndow
     uniqueID: 4251370793
+    locked: 0
+  - name: PlayerName
+    uniqueID: 756829449
     locked: 0

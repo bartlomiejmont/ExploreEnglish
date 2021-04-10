@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 23860194}
   - component: {fileID: 23860196}
   - component: {fileID: 23860195}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 41890209}
   - component: {fileID: 41890211}
   - component: {fileID: 41890210}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 76091368}
   - component: {fileID: 76091370}
   - component: {fileID: 76091369}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ RectTransform:
   m_GameObject: {fileID: 76091367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.6, z: 1}
   m_Children: []
   m_Father: {fileID: 1799257889}
   m_RootOrder: 0
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 78412671}
   - component: {fileID: 78412670}
   - component: {fileID: 78412669}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 142652616}
   - component: {fileID: 142652618}
   - component: {fileID: 142652617}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BackGroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 309541732}
   - component: {fileID: 309541731}
   - component: {fileID: 309541730}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: LeftTenseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 516630038}
   - component: {fileID: 516630040}
   - component: {fileID: 516630039}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlaceToWriteAnswer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 534254913}
   - component: {fileID: 534254915}
   - component: {fileID: 534254914}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 568508075}
   - component: {fileID: 568508077}
   - component: {fileID: 568508076}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlaceToWriteAnswer5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 700196890}
   - component: {fileID: 700196889}
   - component: {fileID: 700196888}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -952,9 +952,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 912412346}
-        m_MethodName: changeMenuScene
-        m_Mode: 5
+      - m_Target: {fileID: 1799257890}
+        m_MethodName: CloseMiniGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 717558662}
   - component: {fileID: 717558664}
   - component: {fileID: 717558663}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: WordOnLeft (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 722772702}
   - component: {fileID: 722772704}
   - component: {fileID: 722772703}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1167,7 @@ GameObject:
   - component: {fileID: 853565391}
   - component: {fileID: 853565393}
   - component: {fileID: 853565392}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: WordOnLeft (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1245,7 +1245,6 @@ GameObject:
   - component: {fileID: 912412345}
   - component: {fileID: 912412344}
   - component: {fileID: 912412343}
-  - component: {fileID: 912412346}
   - component: {fileID: 912412347}
   m_Layer: 0
   m_Name: Main Camera
@@ -1289,7 +1288,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 540.7333
+  orthographic size: 1172.4329
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1319,18 +1318,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &912412346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912412342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33021ebc9b1e40a43b756cc7444bd8b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &912412347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,7 +1342,7 @@ GameObject:
   - component: {fileID: 919696282}
   - component: {fileID: 919696281}
   - component: {fileID: 919696280}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,7 +1481,7 @@ GameObject:
   - component: {fileID: 1014630344}
   - component: {fileID: 1014630346}
   - component: {fileID: 1014630345}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: EndGamePopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1571,7 +1558,7 @@ GameObject:
   - component: {fileID: 1104731977}
   - component: {fileID: 1104731979}
   - component: {fileID: 1104731978}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1636,7 @@ GameObject:
   - component: {fileID: 1143420819}
   - component: {fileID: 1143420821}
   - component: {fileID: 1143420820}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1727,7 +1714,7 @@ GameObject:
   - component: {fileID: 1149616719}
   - component: {fileID: 1149616721}
   - component: {fileID: 1149616720}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlaceToWriteAnswer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1802,7 +1789,7 @@ GameObject:
   - component: {fileID: 1224254028}
   - component: {fileID: 1224254030}
   - component: {fileID: 1224254029}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1881,7 +1868,7 @@ GameObject:
   - component: {fileID: 1240308972}
   - component: {fileID: 1240308971}
   - component: {fileID: 1240308970}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2020,7 +2007,7 @@ GameObject:
   - component: {fileID: 1255938561}
   - component: {fileID: 1255938563}
   - component: {fileID: 1255938562}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlaceToWriteAnswer4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2096,7 +2083,7 @@ GameObject:
   - component: {fileID: 1271714210}
   - component: {fileID: 1271714209}
   - component: {fileID: 1271714208}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlayAgain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2166,7 +2153,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1799257890}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
@@ -2225,7 +2212,7 @@ GameObject:
   - component: {fileID: 1427893499}
   - component: {fileID: 1427893501}
   - component: {fileID: 1427893500}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2369,7 +2356,7 @@ GameObject:
   - component: {fileID: 1486459630}
   - component: {fileID: 1486459632}
   - component: {fileID: 1486459631}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2447,7 +2434,7 @@ GameObject:
   - component: {fileID: 1550606660}
   - component: {fileID: 1550606662}
   - component: {fileID: 1550606661}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlaceToWriteAnswer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2522,7 +2509,7 @@ GameObject:
   - component: {fileID: 1604505171}
   - component: {fileID: 1604505173}
   - component: {fileID: 1604505172}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: WordOnLeft (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2601,7 +2588,7 @@ GameObject:
   - component: {fileID: 1618475482}
   - component: {fileID: 1618475481}
   - component: {fileID: 1618475480}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2741,7 +2728,7 @@ GameObject:
   - component: {fileID: 1634919517}
   - component: {fileID: 1634919516}
   - component: {fileID: 1634919515}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2882,7 +2869,7 @@ GameObject:
   - component: {fileID: 1720596821}
   - component: {fileID: 1720596820}
   - component: {fileID: 1720596823}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: CheckButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3035,7 +3022,7 @@ GameObject:
   - component: {fileID: 1786992670}
   - component: {fileID: 1786992672}
   - component: {fileID: 1786992671}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3114,10 +3101,9 @@ GameObject:
   - component: {fileID: 1799257888}
   - component: {fileID: 1799257887}
   - component: {fileID: 1799257886}
-  - component: {fileID: 1799257891}
   - component: {fileID: 1799257892}
   - component: {fileID: 1799257890}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3153,12 +3139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.442
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3192,8 +3178,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799257885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1.697219, y: 1.697219, z: 1.697219}
   m_Children:
   - {fileID: 76091368}
   - {fileID: 309541732}
@@ -3216,7 +3202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1, y: 3}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799257890
@@ -3228,7 +3214,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1799257885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc0ef83503aabf14bbfcf7649708187e, type: 3}
+  m_Script: {fileID: 11500000, guid: 26f921c764c1e2041852fdee1b08892d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text1: {fileID: 534254914}
@@ -3243,19 +3229,6 @@ MonoBehaviour:
   text10: {fileID: 717558663}
   text11: {fileID: 2025145495}
   EndGamePopUp: {fileID: 1014630343}
---- !u!114 &1799257891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799257885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77e64108b68c20445ae7bc1c33554713, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeCounter: {fileID: 0}
 --- !u!114 &1799257892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3279,7 +3252,7 @@ GameObject:
   - component: {fileID: 1812323077}
   - component: {fileID: 1812323079}
   - component: {fileID: 1812323078}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: RightTenseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3357,7 +3330,7 @@ GameObject:
   - component: {fileID: 1835188731}
   - component: {fileID: 1835188733}
   - component: {fileID: 1835188732}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3435,7 +3408,7 @@ GameObject:
   - component: {fileID: 1987632210}
   - component: {fileID: 1987632212}
   - component: {fileID: 1987632211}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3513,7 +3486,7 @@ GameObject:
   - component: {fileID: 1998216743}
   - component: {fileID: 1998216745}
   - component: {fileID: 1998216744}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3591,7 +3564,7 @@ GameObject:
   - component: {fileID: 2025145494}
   - component: {fileID: 2025145496}
   - component: {fileID: 2025145495}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: WordOnLeft (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3669,7 +3642,7 @@ GameObject:
   - component: {fileID: 2064395842}
   - component: {fileID: 2064395844}
   - component: {fileID: 2064395843}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: WordOnLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}

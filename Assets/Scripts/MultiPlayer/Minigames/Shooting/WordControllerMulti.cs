@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Mirror;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -29,7 +30,7 @@ public class WordControllerMulti : MonoBehaviour
         Cursor.visible = false;
         screenCenter = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         words = WordsContainer.GetAllPairsForShootingGame();
-        currentCategory = DrawTaskCategory.GetCurrentCategory();
+        currentCategory = DrawTaskCategoryMulti.GetCurrentCategory();
         word.text = SetCurrentWord();
         SetWordRotation();
         movementVector = (screenCenter - transform.position).normalized * speed;
@@ -92,6 +93,7 @@ public class WordControllerMulti : MonoBehaviour
         string entry;
         if (words.TryGetValue(word.text, out entry))
         {
+            Debug.Log("1: " + entry + " 2: " + currentCategory);
             if (entry == currentCategory)
                 return true;
         }
@@ -128,18 +130,29 @@ public class WordControllerMulti : MonoBehaviour
                 Destroy(word);
             }
 
-            DrawTaskCategory.ShowWinText();
-            WordSpawn game = Camera.main.GetComponent<WordSpawn>();
-            SaveTaskData();
-            MakeTaskInactive();
+            var players = GameObject.FindGameObjectsWithTag("Player");
+
+            foreach (var player in players)
+            {
+                if (player.GetComponent<NetworkIdentity>().hasAuthority)
+                {
+                    player.GetComponent<PlayerControllerMirror>().miniGamesState["ShootingTaskMultiScene"] = true;
+                }
+            }
+
+            DrawTaskCategoryMulti.ShowWinText();
+            WordSpawnMulti game = Camera.main.GetComponent<WordSpawnMulti>();
+            //SaveTaskData();
+            //MakeTaskInactive();
             game.enabled = false;
             SetScore.wordCount = 0;
+            Cursor.visible = true;
         }
     }
 
     private void SaveTaskData()
     {
-        GameManager._instance.tasksReport.shootingTaskTimer = Mathf.Round(Camera.main.GetComponent<WordSpawn>().taskTimer * 100f) / 100f;
+        GameManager._instance.tasksReport.shootingTaskTimer = Mathf.Round(Camera.main.GetComponent<WordSpawnMulti>().taskTimer * 100f) / 100f;
         GameManager._instance.tasksReport.shootingTaskErrors = errors;
         GameManager._instance.AssignTasks("SHOOTING TASK");
         GameManager._instance.AssignTasks(GameManager._instance.tasksReport.shootingTaskTimer.ToString());

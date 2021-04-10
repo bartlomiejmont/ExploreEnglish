@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Mirror;
 using UnityEngine;
 
 public class CheckSentenceMirror : MonoBehaviour
@@ -7,7 +8,7 @@ public class CheckSentenceMirror : MonoBehaviour
     private static GameObject[] frames;
     private int score = 0;
     private int errors = 0;
-    private bool isTaskFinished = false;
+    public bool isTaskFinished = false;
 
     public bool isLocked;
 
@@ -90,10 +91,18 @@ public class CheckSentenceMirror : MonoBehaviour
         if (score >= holders.Length)
         {
             CanvasControllerMirror.SetWinText();
-            SaveTaskData();
-            GameManager._instance.MakeTaskInactive();
+            var players = GameObject.FindGameObjectsWithTag("Player");
+            
+            foreach (var player in players)
+            {
+                if (player.GetComponent<NetworkIdentity>().hasAuthority)
+                {
+                    player.GetComponent<PlayerControllerMirror>().miniGamesState["MakeSentenceTaskMultiplayerScene"] = true;
+                }
+            }
+
             isTaskFinished = true;
-            GameManager._instance.tasksReport.isTranslateSentenceTaskFinished = true;
+            //GameManager._instance.tasksReport.isTranslateSentenceTaskFinished = true;
             //GameManager._instance.UpdateProgressBar();
         }
     }

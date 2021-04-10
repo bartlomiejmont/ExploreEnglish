@@ -2,24 +2,144 @@
 <PastWordsCollection>
     <PresetPastWords>
         <PresentPast>
-            <presentWord>Make</presentWord>
-            <pastWord>Made</pastWord>
+            <presentWord>make</presentWord>
+            <pastWord>made</pastWord>
         </PresentPast>
         <PresentPast>
-            <presentWord>Speak</presentWord>
-            <pastWord>Spoke</pastWord>
+            <presentWord>speak</presentWord>
+            <pastWord>spoke</pastWord>
+        </PresentPast>
+
+        <PresentPast>
+            <presentWord>cost</presentWord>
+            <pastWord>cost</pastWord>
+        </PresentPast>
+        
+        <PresentPast>
+            <presentWord>become</presentWord>
+            <pastWord>became</pastWord>
         </PresentPast>
         <PresentPast>
-            <presentWord>Bring</presentWord>
-            <pastWord>Brought</pastWord>
+            <presentWord>begin</presentWord>
+            <pastWord>began</pastWord>
         </PresentPast>
         <PresentPast>
-            <presentWord>Cost</presentWord>
-            <pastWord>Cost</pastWord>
+            <presentWord>blow</presentWord>
+            <pastWord>blew</pastWord>
         </PresentPast>
         <PresentPast>
-            <presentWord>Leave</presentWord>
-            <pastWord>Left</pastWord>
+            <presentWord>break</presentWord>
+            <pastWord>broke</pastWord>
         </PresentPast>
+        <PresentPast>
+            <presentWord>bring</presentWord>
+            <pastWord>brought</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>build</presentWord>
+            <pastWord>built</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>catch</presentWord>
+            <pastWord>caught</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>buy</presentWord>
+            <pastWord>bought</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>draw</presentWord>
+            <pastWord>drew</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>fall</presentWord>
+            <pastWord>fell</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>feed</presentWord>
+            <pastWord>fed</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>find</presentWord>
+            <pastWord>found</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>get</presentWord>
+            <pastWord>got</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>give</presentWord>
+            <pastWord>gave</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>go</presentWord>
+            <pastWord>went</pastWord>
+        </PresentPast>
+
+        <PresentPast>
+            <presentWord>grow</presentWord>
+            <pastWord>grew</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>hang</presentWord>
+            <pastWord>hung</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>have</presentWord>
+            <pastWord>had</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>hear</presentWord>
+            <pastWord>heard</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>hide</presentWord>
+            <pastWord>hid</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>hit</presentWord>
+            <pastWord>hit</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>hold</presentWord>
+            <pastWord>held</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>hurt</presentWord>
+            <pastWord>hurt</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>keep</presentWord>
+            <pastWord>kept</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>know</presentWord>
+            <pastWord>knew</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>lay</presentWord>
+            <pastWord>laid</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>lead</presentWord>
+            <pastWord>led</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>leave</presentWord>
+            <pastWord>left</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>lend</presentWord>
+            <pastWord>lent</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>let</presentWord>
+            <pastWord>let</pastWord>
+        </PresentPast>
+        <PresentPast>
+            <presentWord>lose</presentWord>
+            <pastWord>lost</pastWord>
+        </PresentPast>
+        
     </PresetPastWords>
 </PastWordsCollection>

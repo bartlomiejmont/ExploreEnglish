@@ -837,7 +837,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563165306}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -1539,6 +1539,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1658668746}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1087666807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1864,7 +1875,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: localhost
 --- !u!222 &1327171007
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1966,6 +1977,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1658668746}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1401440146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,7 +2086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcff32aae62043a48ae4cd605b959dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  networkManager: {fileID: 1648509442}
   landingPagePanel: {fileID: 822118822}
   ipAddressInputField: {fileID: 1635897596}
   joinButton: {fileID: 1401440145}
@@ -2245,7 +2266,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
+  m_Text: localhost
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -2297,9 +2318,10 @@ GameObject:
   - component: {fileID: 1648509443}
   - component: {fileID: 1648509442}
   - component: {fileID: 1648509441}
+  - component: {fileID: 1648509444}
   m_Layer: 0
   m_Name: NetworkManager
-  m_TagString: Untagged
+  m_TagString: NetworkManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2316,7 +2338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  port: 15268
+  port: 16562
   NoDelay: 1
   serverMaxMessageSize: 16384
   serverMaxReceivesPerTick: 10000
@@ -2353,7 +2375,10 @@ MonoBehaviour:
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 4424293356964217662, guid: 0d643489aea4b5a4391e2bdeebd990f6, type: 3}
+  - {fileID: 536342107360672105, guid: 14c7936c6b737cf429cab531f8c1ae5f, type: 3}
+  - {fileID: 6209874655521234837, guid: 02da7744dddc05c4091e3712f04853e8, type: 3}
   menuScene: Assets/Scenes/Multi/UsernameMultiplayerScene.unity
   lobbyPlayerPrefab: {fileID: 6701427220667722618, guid: 14c7936c6b737cf429cab531f8c1ae5f,
     type: 3}
@@ -2374,6 +2399,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1648509444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648509440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1c2c4831a282148b2bff1441349968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players: []
 --- !u!1 &1658668746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,6 +2464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8271f3b9893dde8479c700bced2feec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   nameInputField: {fileID: 1610229043}
   continueButton: {fileID: 2096742250}
 --- !u!222 &1658668749

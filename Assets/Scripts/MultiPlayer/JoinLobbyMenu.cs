@@ -5,14 +5,14 @@ using UnityEngine.UI;
 public class JoinLobbyMenu : MonoBehaviour
 {
 
-    [SerializeField] private NetworkManagerLobby networkManager = null;
+    private NetworkManagerLobby networkManager = null;
 
     [Header("UI")] 
     [SerializeField] private GameObject landingPagePanel = null;
-
     [SerializeField] private InputField ipAddressInputField = null;
     [SerializeField] private Button joinButton = null;
 
+ 
     private void OnEnable()
     {
         NetworkManagerLobby.OnClientConnected += HandleClientConnected;
@@ -27,6 +27,8 @@ public class JoinLobbyMenu : MonoBehaviour
 
     public void JoinLobby()
     {
+        networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkManagerLobby>();
+        Debug.Log(networkManager);
         string ipAddress = ipAddressInputField.text;
         networkManager.networkAddress = ipAddress;
         networkManager.StartClient();
@@ -37,8 +39,8 @@ public class JoinLobbyMenu : MonoBehaviour
     private void HandleClientConnected()
     {
         joinButton.interactable = true;
-        gameObject.SetActive(false);
-        landingPagePanel.SetActive(false);
+        //gameObject.SetActive(false); TO DO - Make it change it in another script?
+        //landingPagePanel.SetActive(false);
     }
 
     private void HandleClientDisconnected()

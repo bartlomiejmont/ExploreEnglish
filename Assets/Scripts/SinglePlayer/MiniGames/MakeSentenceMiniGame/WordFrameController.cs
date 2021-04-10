@@ -72,8 +72,8 @@ public class WordFrameController : MonoBehaviour
 
         foreach (var holder in holders)
         {
-            Debug.Log("FRAME POSITION -> x : " + transform.position.x + ", y : " + transform.position.y);
-            Debug.Log("HOLDER POSITION -> x : " + holder.transform.position.x + ", y : " + holder.transform.position.y);
+            // Debug.Log("FRAME POSITION -> x : " + transform.position.x + ", y : " + transform.position.y);
+            // Debug.Log("HOLDER POSITION -> x : " + holder.transform.position.x + ", y : " + holder.transform.position.y);
             if (Mathf.Abs(transform.position.x - holder.transform.position.x) <= 30f &&
                 Mathf.Abs(transform.position.y - holder.transform.position.y) <= 30f)
             {

@@ -11,19 +11,21 @@ public class DictionarySentenceSetup : MonoBehaviour
 
     void Start()
     {
-        list = new List<Tuple<string, int>>
-        {
-            Tuple.Create("It's", 0),
-            Tuple.Create("a", 1),
-            Tuple.Create("sentence", 2),
-            Tuple.Create("in", 3),
-            Tuple.Create("Polish", 4)
-        };
+        // list = new List<Tuple<string, int>>
+        // {
+        //     Tuple.Create("It's", 0),
+        //     Tuple.Create("a", 1),
+        //     Tuple.Create("sentence", 2),
+        //     Tuple.Create("in", 3),
+        //     Tuple.Create("Polish", 4)
+        // };
         
-        wordSet = new Dictionary<string, List<Tuple<string, int>>>
-        {
-            { "To jest zdanie po polsku", list }
-        };
+        // wordSet = new Dictionary<string, List<Tuple<string, int>>>
+        // {
+        //     { "To jest zdanie po polsku", list }
+        // };
+
+        wordSet = WordsContainer.GetRandomSentence();
 
         listCount = wordSet.Sum(x => x.Value.Count);
     }

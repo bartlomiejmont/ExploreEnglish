@@ -1,5 +1,6 @@
 ﻿using Mirror;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NetworkPlayerInLobby : NetworkBehaviour
@@ -55,13 +56,17 @@ public class NetworkPlayerInLobby : NetworkBehaviour
     {
         Lobby.LobbyPlayers.Remove(this);
         UpdateDisplay();
+        if(!isServer) 
+            SceneManager.LoadScene("MainMenu");
     }
+
 
     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
     public void HandleDisplayNameChanged(string oldValue, string newValue) => UpdateDisplay();
 
     private void UpdateDisplay()
     {
+
         if (!isLocalPlayer)
         {
             foreach (var player in Lobby.LobbyPlayers)
@@ -69,10 +74,11 @@ public class NetworkPlayerInLobby : NetworkBehaviour
                 if (player.hasAuthority)
                 {
                     player.UpdateDisplay();
+                    player.gameObject.SetActive(false);
+                    player.gameObject.SetActive(true);
                     break;
                 }
             }
-
             return;
         }
 
@@ -95,6 +101,21 @@ public class NetworkPlayerInLobby : NetworkBehaviour
     {
         if (!isLeader) { return; }
         startGameButton.interactable = readyToStart;
+    }
+
+    public void ExitLobby()
+    {
+        Lobby.LobbyPlayers.Remove(this);
+        UpdateDisplay();
+        SceneManager.LoadScene("MainMenu");
+        GameObject manager = GameObject.FindGameObjectWithTag("NetworkManager");
+        if (manager)
+            Destroy(manager);
+
+        if (isServer)
+            Lobby.StopHost();
+        else
+            Lobby.StopClient();
     }
 
     [Command]

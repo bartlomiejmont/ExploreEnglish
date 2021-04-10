@@ -24,13 +24,13 @@ public class NetworkManagerLobby : NetworkManager
 
     public List<NetworkPlayerInLobby> LobbyPlayers { get; } = new List<NetworkPlayerInLobby>();
     public List<PlayerControllerMirror> GamePlayers { get; } = new List<PlayerControllerMirror>();
-
+    
     public override void OnStartServer() => spawnPrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs").ToList();
+
 
     public override void OnStartClient()
     {
         var spawnablePrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs");
-
         foreach (var prefab in spawnablePrefabs)
         {
             ClientScene.RegisterPrefab(prefab);
@@ -68,7 +68,7 @@ public class NetworkManagerLobby : NetworkManager
     {
         if (("Assets/Scenes/Multi/" + SceneManager.GetActiveScene().name + ".unity").Equals(menuScene))
         {
-            Debug.Log("DODANO");
+            Debug.Log("DODANO + " + LobbyPlayers.Count);
             bool isLeader = LobbyPlayers.Count == 0;
             NetworkPlayerInLobby lobbyPlayerInstance = Instantiate(lobbyPlayerPrefab);
             lobbyPlayerInstance.IsLeader = isLeader;
@@ -124,13 +124,17 @@ public class NetworkManagerLobby : NetworkManager
 
     public override void ServerChangeScene(string sceneName)
     {
+        float x = 0;
+        float y = -12.5f;
+
         if (("Assets/Scenes/Multi/" + SceneManager.GetActiveScene().name + ".unity") == menuScene &&
             sceneName == "GameSceneMultiplayer")
         {
             for (int i = LobbyPlayers.Count - 1; i >= 0; i--)
             {
+                Vector3 playerPosition = GetSpawnPosition(i, x, y);
                 var connection = LobbyPlayers[i].connectionToClient;
-                var playerInstance = Instantiate(gamePlayerPrefab);
+                var playerInstance = Instantiate(gamePlayerPrefab , playerPosition, Quaternion.identity);
                 playerInstance.usernameString = connection.identity.gameObject.GetComponent<NetworkPlayerInLobby>().DisplayName; // get current player in lobby object nickname
 
                 NetworkServer.Destroy((connection.identity.gameObject));
@@ -141,9 +145,25 @@ public class NetworkManagerLobby : NetworkManager
         base.ServerChangeScene(sceneName);
     }
 
-
-    public void SetNicknames()
+    public Vector3 GetSpawnPosition(int i, float x, float y)
     {
-        
+        if (i == 0 || i == 1)
+        {
+            x -= 2;
+        }
+        else if (i == 4 || i == 5)
+        {
+            x += 2;
+        }
+        else if (i == 2 || i == 3)
+        {
+            y -= 2;
+        }
+        else if (i == 6 || i == 7)
+        {
+            y += 2;
+        }
+
+        return new Vector3(x, y, 0);
     }
 }

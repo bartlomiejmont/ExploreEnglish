@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using Mirror;
+using UnityEngine;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
 
@@ -15,8 +17,16 @@ public class ProgressBar : MonoBehaviour
 
     void Start()
     {
+        var players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (var player in players)
+        {
+            if (player.GetComponent<NetworkIdentity>().hasAuthority)
+            {
+                current = player.GetComponent<PlayerControllerMirror>().tasksDone;
+            }
+        }
         maximum = taskCount;
-        current = GameManager._instance.tasksDone;
     }
 
     void Update()
@@ -24,8 +34,8 @@ public class ProgressBar : MonoBehaviour
         GetCurrentFill();
         progressBarText.text = " " + current + " / " + taskCount;
     }
-
-    public void GetCurrentFill()
+    
+    private void GetCurrentFill()
     {
         if (current == 0)
             mask.fillAmount = 0f;
@@ -34,5 +44,7 @@ public class ProgressBar : MonoBehaviour
             mask.fillAmount = current / (float)taskCount; 
         }
     }
+    
+    
 
 }

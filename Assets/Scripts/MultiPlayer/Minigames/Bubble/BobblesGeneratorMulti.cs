@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -62,7 +63,17 @@ public class BobblesGeneratorMulti : MonoBehaviour
         // WIN 
         if (this.textEnglish.text.Length == toWrite.Length)
         {
-            SceneManager.LoadScene("GameScene");
+            var players = GameObject.FindGameObjectsWithTag("Player");
+
+            foreach (var player in players)
+            {
+                if (player.GetComponent<NetworkIdentity>().hasAuthority)
+                {
+                    player.GetComponent<PlayerControllerMirror>().miniGamesState["BubblesTaskMultiScene"] = true;
+                }
+            }
+
+            CloseMiniGame();
             SaveTaskData();
         }
     }
@@ -133,7 +144,7 @@ public class BobblesGeneratorMulti : MonoBehaviour
     public void CloseMiniGame()
     {
         OnBobbleClicked = null;
-        SceneLoader.LoadMainScene();
+        SceneManager.LoadScene("GameSceneMultiplayer");
     }
 
 }
